@@ -1,0 +1,2 @@
+# ribo_analyzer
+This project is under Dr. Yonatan Chemla and aims to characterize the relative strengths of ribosomal binding site affinities across genes in the E. coli genome, ultimately clarifying the mode of translation initiation for genes in polycistronic operons. The current focus of my UROP will be to assist in the development of a computational pipeline to perform data analysis of in-vitro prokaryotic ribosome profiling.
