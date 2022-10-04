@@ -10,6 +10,7 @@
 #	-a adapter
 #		CTGTAGGCACCATCAAT (march, april, jan)
 #		AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC (sep)
+#   -g name of genome (e.g. E_coli)
 #	-m minimum length of read
 #	-M maximum length of read
 
