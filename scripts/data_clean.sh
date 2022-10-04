@@ -17,10 +17,11 @@
 
 
 #interpret input
-while getopts a:m:M: flag
+while getopts a:g:m:M: flag
 do
     case "${flag}" in
         a) adapter=${OPTARG};;
+        g) genome=${OPTARG};;
         m) min=${OPTARG};;
         M) max=${OPTARG};;
     esac
@@ -64,5 +65,5 @@ for i in filtered.$min.$max/*_F_filt.fastq.gz;
 do 
 base=$(basename $i "_F_filt.fastq.gz")
 (echo ${base}) &>> "stats/Sep2021_align.$min.$max.txt"
-(bowtie2 --phred33 --local -N 0 -L 19 --un sam.$min.$max/unmapped/ -x E_Coli -U filtered.$min.$max/${base}_F_filt.fastq.gz -S sam.$min.$max/${base}.sam) 2>>  "stats/Sep2021_align.$min.$max.txt"
+(bowtie2 --phred33 --local -N 0 -L 19 --un sam.$min.$max/unmapped/ -x $genome -U filtered.$min.$max/${base}_F_filt.fastq.gz -S sam.$min.$max/${base}.sam) 2>>  "stats/Sep2021_align.$min.$max.txt"
 done
